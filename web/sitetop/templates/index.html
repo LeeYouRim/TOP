@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--        <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Document</title>
+    <!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
+    <!--              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+</head>
+<body>
+<div class="container mt-5">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">
+<!--            <select id="category">-->
+<!--                <option value=""></option>-->
+<!--            </select>-->
+            범주
+            </th>
+            <th scope="col">제목</th>
+            <th scope="col">브랜드</th>
+            <th scope="col">날짜</th>
+            <th><a href="/export">save</a></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for todayrank in todayranks %}
+        <tr>
+            <td>{{ todayrank.category }}</td>
+            <td>{{ todayrank.title }}</td>
+            <td>{{ todayrank.brand }}</td>
+            <td>{{ todayrank.today }}</td>
+            <td></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
